@@ -1,3 +1,4 @@
+import readline from 'readline';
 
 const getUserInput = async (prompt) => {
 	const rl = readline.createInterface({
@@ -6,11 +7,11 @@ const getUserInput = async (prompt) => {
 	});
 
 	return new Promise((resolve, reject) => {
-		rl.question(prompt, (userInput) => {
+		rl.question(`${prompt}\n`, (userInput) => {
 			rl.close();
 			resolve(userInput);
 		});
 	});
 };
 
-module.exports = { getUserInput };
+export { getUserInput };

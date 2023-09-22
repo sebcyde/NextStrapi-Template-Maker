@@ -1,11 +1,13 @@
 {
-  "name": "nextstrapi",
-  "version": "1.0.0",
-  "description": "NextJS/Strapi boilerplate creator",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "JTSC",
-  "license": "ISC"
+	"type": "module",
+	"name": "nextstrapi",
+	"version": "1.0.0",
+	"description": "NextJS/Strapi boilerplate creator",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node index.js"
+	},
+	"author": "JTSC",
+	"license": "ISC"
 }

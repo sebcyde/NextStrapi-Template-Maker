@@ -1,17 +1,18 @@
-const path = require('path');
-const fs = require('fs');
+import path from 'path';
+import fs from 'fs';
 
 const createDirectory = async (directoryPath, directoryName) => {
 	const Directory = path.join(directoryPath, directoryName);
 
-	
 	fs.mkdir(Directory, (err) => {
 		if (err) {
 			console.error(`Error creating directory: ${err}`);
 		} else {
-			console.log(`Directory '${fullPath}' created successfully.`);
+			console.log(`Directory '${Directory}' created successfully.`);
 		}
 	});
+
+	return Directory;
 };
 
-module.exports = { createDirectory };
+export { createDirectory };

@@ -1,4 +1,4 @@
-import { getUserInput } from './Functions/getInput';
+import { getUserInput } from './getInput.js';
 
 const getProjectName = async () => {
 	let ProjectName;
@@ -11,15 +11,15 @@ const getProjectName = async () => {
 		);
 
 		confirm = await getUserInput(
-			`${ProjectName.toLowercase()} is correct? y/n`
+			`${ProjectName.toLowerCase()} is correct? y/n`
 		);
 
-		if (!confirm.toLowercase() == 'y') {
+		if (!confirm.toLowerCase() == 'y') {
 			console.log('Incorrect format. Acceptable format is y/n');
 		}
-	} while (!confirm.toLowercase() == 'y');
+	} while (!confirm.toLowerCase() == 'y');
 
 	return ProjectName;
 };
 
-module.exports = { getProjectName };
+export { getProjectName };
